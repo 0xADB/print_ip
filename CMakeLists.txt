@@ -56,17 +56,6 @@ set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE amd64)
 set(CPACK_DEBIAN_PACKAGE_SECTION "Development")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Anton Beregovoy <${CPACK_PACKAGE_CONTACT}>")
 
-find_package(Doxygen)
-if (DOXYGEN_FOUND)
-  add_custom_target(doc ALL
-    COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-    COMMENT "Generating API documentation with Doxygen"
-    VERBATIM
-    )
-endif()
-
-
 include(CPack)
 
 enable_testing()
