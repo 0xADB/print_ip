@@ -15,7 +15,7 @@ namespace ip
   template<typename T>
     struct printer<
       T
-      , typename std::enable_if<std::is_integral<T>::value>::type
+      , typename std::enable_if_t<std::is_integral_v<T>>
       >
     {
       void operator()(std::ostream& stream, const T& addr)
@@ -33,7 +33,7 @@ namespace ip
   template<typename ContainerT>
     struct printer<
       ContainerT
-      , typename std::enable_if<std::is_integral<typename ContainerT::value_type>::value>::type
+      , typename std::enable_if_t<std::is_integral_v<typename ContainerT::value_type>>
       >
     {
       void operator()(std::ostream& stream, const ContainerT& addr)
@@ -77,14 +77,14 @@ namespace ip
       }
 
       template<typename U, size_t I = 0>
-	typename std::enable_if<std::is_same<U,T>::value>::type
+	typename std::enable_if_t<std::is_same_v<U,T>>
 	  operator()(std::ostream& stream, const TupleT& addr)
       {
 	print(stream, std::get<I>(addr));
       }
 
       template<typename U, typename... Brgs, size_t I = sizeof...(Brgs)>
-	typename std::enable_if<std::is_same<U,T>::value && sizeof...(Brgs)>::type
+	typename std::enable_if_t<std::is_same_v<U,T> && sizeof...(Brgs)>
 	  operator()(std::ostream& stream, const TupleT& addr)
       {
 	operator()<Brgs...>(stream, addr);
