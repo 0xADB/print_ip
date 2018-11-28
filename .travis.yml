@@ -1,12 +1,11 @@
 dist: xenial
 language: cpp
 before_script:
-  - wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-  - sudo apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-7 main"
-  - sudo apt-get update
-  - sudo apt-get -y install clang-7 libboost-test-dev doxygen graphviz
+  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+  - sudo apt update
+  - sudo apt -y install gcc-6 libboost-test-dev doxygen graphviz
 script:
-  - cmake . -DCMAKE_C_COMPILER=clang-7 -DCMAKE_CXX_COMPILER=clang++-7
+  - cmake .
   - cmake --build . -- VERBOSE=1
   - cmake --build . --target test -- VERBOSE=1
   - cmake --build . --target package -- VERBOSE=1
