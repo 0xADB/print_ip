@@ -97,8 +97,8 @@ Functions</h2></td></tr>
 <tr class="separator:a149ac2a2c7b91844a3e1b08ae0d9ed3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23e23b7e9df0d24e0ec390302955b25a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a23e23b7e9df0d24e0ec390302955b25a">find_package</a> (Boost COMPONENTS unit_test_framework REQUIRED) configure_file(version.h.in autoversion.h) include_directories($</td></tr>
 <tr class="separator:a23e23b7e9df0d24e0ec390302955b25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf884f3af0184ef8fa23120ffe8f461a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#acf884f3af0184ef8fa23120ffe8f461a">add_executable</a> (print_ip main.cpp) add_executable(test_print_ip test_main.cpp) <a class="el" href="CMakeLists_8txt.html#ab836a2b9b26a2c94757b39c72d027621">set_target_properties</a>(print_ip test_print_ip PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON COMPILE_OPTIONS&quot;-Wpedantic</td></tr>
-<tr class="separator:acf884f3af0184ef8fa23120ffe8f461a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d10a93ad483835a95c5ed2819d5b97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a02d10a93ad483835a95c5ed2819d5b97">add_executable</a> (print_ip main.cpp) add_executable(test_print_ip test_main.cpp) <a class="el" href="CMakeLists_8txt.html#ab836a2b9b26a2c94757b39c72d027621">set_target_properties</a>(print_ip test_print_ip PROPERTIES COMPILE_OPTIONS&quot;-std</td></tr>
+<tr class="separator:a02d10a93ad483835a95c5ed2819d5b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab836a2b9b26a2c94757b39c72d027621"><td class="memItemLeft" align="right" valign="top">Weffc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#ab836a2b9b26a2c94757b39c72d027621">set_target_properties</a> (test_print_ip PROPERTIES COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK INCLUDE_DIRECTORIES&quot;${Boost_INCLUDE_DIR};${CMAKE_CURRENT_SOURCE_DIR}&quot;) target_link_libraries(test_print_ip $</td></tr>
 <tr class="separator:ab836a2b9b26a2c94757b39c72d027621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b194d6612ce5bb1e7a9fba6454d85cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a5b194d6612ce5bb1e7a9fba6454d85cf">install</a> (TARGETS print_ip RUNTIME DESTINATION bin) <a class="el" href="CMakeLists_8txt.html#ac0b6e02848d5570b4b33494986d9d450">set</a>(CPACK_GENERATOR DEB) <a class="el" href="CMakeLists_8txt.html#ac0b6e02848d5570b4b33494986d9d450">set</a>(CPACK_PACKAGE_VERSION_MAJOR&quot;$</td></tr>
@@ -114,13 +114,15 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a2f614e6c05341c5985b3268c9cd30818"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a2f614e6c05341c5985b3268c9cd30818">Wpedantic</a></td></tr>
+<tr class="separator:a2f614e6c05341c5985b3268c9cd30818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f6886266572e51d198a61a6c762ce5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#ad4f6886266572e51d198a61a6c762ce5">Wall</a></td></tr>
 <tr class="separator:ad4f6886266572e51d198a61a6c762ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2bdaabe7939bd6bf795b37dd3b8787"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CMakeLists_8txt.html#a1b2bdaabe7939bd6bf795b37dd3b8787">Wextra</a></td></tr>
 <tr class="separator:a1b2bdaabe7939bd6bf795b37dd3b8787"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="acf884f3af0184ef8fa23120ffe8f461a"></a>
+<a class="anchor" id="a02d10a93ad483835a95c5ed2819d5b97"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -283,6 +285,18 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Wextra</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2f614e6c05341c5985b3268c9cd30818"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Wpedantic</td>
         </tr>
       </table>
 </div><div class="memdoc">
