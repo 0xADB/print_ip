@@ -17,7 +17,7 @@ set_target_properties(
   print_ip
   test_print_ip
   PROPERTIES
-    CXX_STANDARD 14
+    CXX_STANDARD 1z
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra;-Weffc++"
   )
